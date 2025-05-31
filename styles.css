@@ -1,0 +1,61 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e9ecef;
+}
+
+.chat-button {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.chat-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message-bubble {
+    border-radius: 1.25rem;
+    padding: 0.75rem 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInMessage 0.3s forwards;
+}
+
+.user-message {
+    background-color: #A8E6CF; /* Este es un tono de verde claro. Puedes ajustarlo a tu preferencia. */
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #ffffff;
+    align-self: flex-start;
+}
+
+.typing-indicator {
+    opacity: 0.7;
+    font-style: italic;
+    color: #555;
+    background-color: #f2f2f2 !important;
+    box-shadow: none !important;
+}
+
+.message-bubble .text-xs.text-gray-500 {
+    font-size: 0.65rem;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.scroll-container {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInMessage {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
