@@ -16,7 +16,7 @@ body {
 .message-bubble {
     border-radius: 1.25rem;
     padding: 0.75rem 1rem;
-    max-width: 80%;
+    max-width: 80%; /* El ancho normal de las burbujas */
     word-wrap: break-word;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     opacity: 0;
@@ -24,13 +24,18 @@ body {
     animation: fadeInMessage 0.3s forwards;
 }
 
+/* NUEVA REGLA CSS para la burbuja del mapa */
+.message-bubble.map-message-bubble {
+    max-width: 95%; /* Hazla más ancha, casi todo el espacio disponible */
+}
+
 .user-message {
-    background-color: #A8E6CF; /* Este es un tono de verde claro. Puedes ajustarlo a tu preferencia. */
+    background-color: #A8E6CF; /* Esto es para el mensaje del usuario. */
     align-self: flex-end;
 }
 
 .bot-message {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Esto es para el mensaje del bot. */
     align-self: flex-start;
 }
 
